@@ -1,0 +1,15 @@
+[package]
+name = "inflection-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool for the inflection library — transform English words between singular/plural, CamelCase/snake_case, and more"
+license = "MIT"
+
+[[bin]]
+name = "inflection"
+path = "src/main.rs"
+
+[dependencies]
+inflection = { path = "../inflection" }
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"

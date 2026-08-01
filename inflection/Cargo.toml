@@ -1,0 +1,13 @@
+[package]
+name = "inflection"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust port of the Python inflection library (itself a port of Ruby on Rails' ActiveSupport::Inflector)"
+license = "MIT"
+readme = "../README.md"
+
+[dependencies]
+regex = "1"
+unicode-normalization = "0.1"
+
+[dev-dependencies]

@@ -1,0 +1,3 @@
+[workspace]
+members = ["inflection", "inflection-cli"]
+resolver = "2"
