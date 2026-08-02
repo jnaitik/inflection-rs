@@ -91,6 +91,12 @@ donald-e-knuth
 - `transliterate(word)`
 - `underscore(word)`
 
+## Repository Structure
+
+- `inflection/`: The core inflection library.
+- `inflection-cli/`: The command-line interface wrapper.
+- `original/`: Leftover original python files for reference.
+
 ## Architecture & Decisions
 
 Please see [DECISIONS.md](DECISIONS.md) for an in-depth breakdown of how Python's regexes and stateful architecture were adapted to idiomatic, safe Rust.
