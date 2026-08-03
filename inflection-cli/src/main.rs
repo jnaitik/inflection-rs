@@ -97,42 +97,18 @@ fn main() -> Result<(), CliError> {
     let cli = Cli::parse();
 
     let output = match cli.command {
-        Commands::Camelize { input, lower } => {
-            inflection::camelize(&input, !lower)
-        }
-        Commands::Dasherize { input } => {
-            inflection::dasherize(&input)
-        }
-        Commands::Humanize { input } => {
-            inflection::humanize(&input)
-        }
-        Commands::Ordinal { number } => {
-            inflection::ordinal(number).to_string()
-        }
-        Commands::Ordinalize { number } => {
-            inflection::ordinalize(number)
-        }
-        Commands::Parameterize { input, separator } => {
-            inflection::parameterize(&input, &separator)
-        }
-        Commands::Pluralize { input } => {
-            inflection::pluralize(&input)
-        }
-        Commands::Singularize { input } => {
-            inflection::singularize(&input)
-        }
-        Commands::Tableize { input } => {
-            inflection::tableize(&input)
-        }
-        Commands::Titleize { input } => {
-            inflection::titleize(&input)
-        }
-        Commands::Transliterate { input } => {
-            inflection::transliterate(&input)
-        }
-        Commands::Underscore { input } => {
-            inflection::underscore(&input)
-        }
+        Commands::Camelize { input, lower } => inflection::camelize(&input, !lower),
+        Commands::Dasherize { input } => inflection::dasherize(&input),
+        Commands::Humanize { input } => inflection::humanize(&input),
+        Commands::Ordinal { number } => inflection::ordinal(number).to_string(),
+        Commands::Ordinalize { number } => inflection::ordinalize(number),
+        Commands::Parameterize { input, separator } => inflection::parameterize(&input, &separator),
+        Commands::Pluralize { input } => inflection::pluralize(&input),
+        Commands::Singularize { input } => inflection::singularize(&input),
+        Commands::Tableize { input } => inflection::tableize(&input),
+        Commands::Titleize { input } => inflection::titleize(&input),
+        Commands::Transliterate { input } => inflection::transliterate(&input),
+        Commands::Underscore { input } => inflection::underscore(&input),
     };
 
     println!("{output}");

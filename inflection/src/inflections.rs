@@ -56,10 +56,10 @@ static PLURALS: LazyLock<Vec<Rule>> = LazyLock::new(|| {
         // _irregular('cow', 'kine') — different first letter
         // Python inserts these with insert(0), so last-inserted = first-checked.
         // Plural rules (in check order):
-        Rule::new(r"k[iI][nN][eE]$", r"kine"),       // kine/kIne/etc → kine
-        Rule::new(r"K[iI][nN][eE]$", r"Kine"),       // Kine/KIne/etc → Kine
-        Rule::new(r"c[oO][wW]$", r"kine"),            // cow/coW/etc → kine
-        Rule::new(r"C[oO][wW]$", r"Kine"),            // Cow/COW/etc → Kine
+        Rule::new(r"k[iI][nN][eE]$", r"kine"), // kine/kIne/etc → kine
+        Rule::new(r"K[iI][nN][eE]$", r"Kine"), // Kine/KIne/etc → Kine
+        Rule::new(r"c[oO][wW]$", r"kine"),     // cow/coW/etc → kine
+        Rule::new(r"C[oO][wW]$", r"Kine"),     // Cow/COW/etc → Kine
         // _irregular('move', 'moves') — same first letter
         Rule::new(r"(?i)(m)oves$", r"${1}oves"),
         Rule::new(r"(?i)(m)ove$", r"${1}oves"),
@@ -113,8 +113,8 @@ static SINGULARS: LazyLock<Vec<Rule>> = LazyLock::new(|| {
         // _irregular('zombie', 'zombies') — same first letter
         Rule::new(r"(?i)(z)ombies$", r"${1}ombie"),
         // _irregular('cow', 'kine') — different first letter
-        Rule::new(r"k[iI][nN][eE]$", r"cow"),         // kine → cow
-        Rule::new(r"K[iI][nN][eE]$", r"Cow"),         // Kine → Cow
+        Rule::new(r"k[iI][nN][eE]$", r"cow"), // kine → cow
+        Rule::new(r"K[iI][nN][eE]$", r"Cow"), // Kine → Cow
         // _irregular('move', 'moves') — same first letter
         Rule::new(r"(?i)(m)oves$", r"${1}ove"),
         // _irregular('sex', 'sexes') — same first letter

@@ -4,6 +4,7 @@
 //! and [`parameterize`] for creating URL-friendly slugs.
 
 use regex::Regex;
+use std::borrow::Cow;
 use std::sync::LazyLock;
 use unicode_normalization::UnicodeNormalization;
 
@@ -28,11 +29,12 @@ static RE_PARAMETERIZE_UNWANTED: LazyLock<Regex> =
 /// Characters like `Æ` and `ø` that decompose to non-ASCII codepoints
 /// are silently dropped. This matches the Python original's behavior.
 /// For more comprehensive transliteration, consider a dedicated library.
-pub fn transliterate(string: &str) -> String {
-    string
-        .nfkd()
-        .filter(|c| c.is_ascii())
-        .collect()
+pub fn transliterate(string: &str) -> Cow<'_, str> {
+    if string.is_ascii() {
+        return Cow::Borrowed(string);
+    }
+
+    Cow::Owned(string.nfkd().filter(|c| c.is_ascii()).collect())
 }
 
 /// Replaces special characters in a string so that it may be used as part
@@ -169,14 +171,8 @@ mod tests {
 
     #[test]
     fn test_parameterize_underscore_separator() {
-        assert_eq!(
-            parameterize("Donald E. Knuth", "_"),
-            "donald_e_knuth"
-        );
-        assert_eq!(
-            parameterize("With-some-dashes", "_"),
-            "with-some-dashes"
-        );
+        assert_eq!(parameterize("Donald E. Knuth", "_"), "donald_e_knuth");
+        assert_eq!(parameterize("With-some-dashes", "_"), "with-some-dashes");
     }
 
     #[test]

@@ -13,8 +13,7 @@ static RE_UNDERSCORE_2: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r"([a-z\d])([A-Z])").unwrap());
 
 // Pre-compiled regexes for camelize()
-static RE_CAMELIZE: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"(?:^|_)(.)").unwrap());
+static RE_CAMELIZE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?:^|_)(.)").unwrap());
 
 // Pre-compiled regexes for humanize()
 static RE_HUMANIZE_ID: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"_id$").unwrap());
@@ -53,9 +52,7 @@ static RE_TITLEIZE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\b('?\w)").u
 pub fn camelize(string: &str, uppercase_first_letter: bool) -> String {
     if uppercase_first_letter {
         RE_CAMELIZE
-            .replace_all(string, |caps: &regex::Captures| {
-                caps[1].to_uppercase()
-            })
+            .replace_all(string, |caps: &regex::Captures| caps[1].to_uppercase())
             .into_owned()
     } else {
         // Fix for Python Bug #1: empty string no longer panics
@@ -218,7 +215,10 @@ mod tests {
         assert_eq!(camelize("device_type", true), "DeviceType");
         assert_eq!(camelize("product", true), "Product");
         assert_eq!(camelize("special_guest", true), "SpecialGuest");
-        assert_eq!(camelize("application_controller", true), "ApplicationController");
+        assert_eq!(
+            camelize("application_controller", true),
+            "ApplicationController"
+        );
         assert_eq!(camelize("area51_controller", true), "Area51Controller");
     }
 
@@ -246,7 +246,10 @@ mod tests {
     fn test_underscore_basic() {
         assert_eq!(underscore("Product"), "product");
         assert_eq!(underscore("SpecialGuest"), "special_guest");
-        assert_eq!(underscore("ApplicationController"), "application_controller");
+        assert_eq!(
+            underscore("ApplicationController"),
+            "application_controller"
+        );
         assert_eq!(underscore("Area51Controller"), "area51_controller");
     }
 
