@@ -1,0 +1,61 @@
+==================================================
+PORT MORTEM DIFFERENTIAL FUZZING REPORT
+==================================================
+Timestamp    : 2026-08-03T10:44:08.944592+00:00
+Duration     : 65.0 seconds
+Total Tests  : 7,740
+Divergences  : 778
+Status       : FAILED
+==================================================
+
+Divergence Details:
+ - CRASH/ERROR on underscore('-O')
+ - DIVERGENCE on humanize('YÜj0bcvnqa'): Python='YÜj0bcvnqa' vs Rust='Yüj0bcvnqa'
+ - CRASH/ERROR on camelize('-2LVx')
+ - DIVERGENCE on humanize('GA4BuYzpK ÖQPQO'): Python='Ga4buyzpk Öqpqo' vs Rust='Ga4buyzpk öqpqo'
+ - DIVERGENCE on dasherize('PRukMr_YU3N3jf '): Python='PRukMr-YU3N3jf ' vs Rust='PRukMr-YU3N3jf'
+ - DIVERGENCE on camelize(' WSBVwCäP_üOe'): Python=' WSBVwCäPÜOe' vs Rust='WSBVwCäPÜOe'
+ - DIVERGENCE on humanize('Ol17ÜB-GspÜONzÜG7l6'): Python='Ol17Üb-gspÜonzÜg7l6' vs Rust='Ol17üb-gspüonzüg7l6'
+ - DIVERGENCE on titleize('Fgt_'): Python='Fgt ' vs Rust='Fgt'
+ - CRASH/ERROR on singularize('-JMtÖ9xöhk4Wa 1WXH6S3Enm3Lw Aä')
+ - DIVERGENCE on humanize('öZ i6äÄMÜRjhqDfeu9MjJ9RUQu'): Python='Öz i6äÄmÜrjhqdfeu9mjj9ruqu' vs Rust='Öz i6äämürjhqdfeu9mjj9ruqu'
+ - CRASH/ERROR on pluralize('-KI')
+ - DIVERGENCE on humanize('E790cwY8wr9-ÄMrSnbYuCKhx_C'): Python='E790cwy8wr9-Ämrsnbyuckhx c' vs Rust='E790cwy8wr9-ämrsnbyuckhx c'
+ - DIVERGENCE on pluralize(' T3gtH_W5zu1zvöxC FürÄWd0DdnlX'): Python=' T3gtH_W5zu1zvöxC FürÄWd0DdnlXes' vs Rust='T3gtH_W5zu1zvöxC FürÄWd0DdnlXes'
+ - DIVERGENCE on titleize('BAyikMääz_Pä '): Python='B Ayik Määz Pä ' vs Rust='B Ayik Määz Pä'
+ - DIVERGENCE on humanize('pRojÄVÖnhELeEOrGVztv'): Python='ProjÄvÖnheleeorgvztv' vs Rust='Projävönheleeorgvztv'
+ - DIVERGENCE on dasherize(' PowbFhljÜzNmnvHQ1ree'): Python=' PowbFhljÜzNmnvHQ1ree' vs Rust='PowbFhljÜzNmnvHQ1ree'
+ - DIVERGENCE on singularize(' 6OfmE1ÄzHogDÄP'): Python=' 6OfmE1ÄzHogDÄP' vs Rust='6OfmE1ÄzHogDÄP'
+ - DIVERGENCE on humanize(' 52kÄKRäh3ztD2BsnxkJaTXEu'): Python=' 52kÄkräh3ztd2bsnxkjatxeu' vs Rust='52käkräh3ztd2bsnxkjatxeu'
+ - DIVERGENCE on humanize('Aj jQSoSUewÄBOO'): Python='Aj jqsosuewÄboo' vs Rust='Aj jqsosuewäboo'
+ - DIVERGENCE on humanize('öÜ cS_Rf3PDÜam'): Python='ÖÜ cs rf3pdÜam' vs Rust='Öü cs rf3pdüam'
+ - CRASH/ERROR on titleize('-cuö4YzührIOSÜ3iBrysrbcQS')
+ - DIVERGENCE on dasherize(' _ X2o3lä-htÜ-BHeov'): Python=' - X2o3lä-htÜ-BHeov' vs Rust='- X2o3lä-htÜ-BHeov'
+ - CRASH/ERROR on underscore('-95 -1sEFrW2Sü')
+ - DIVERGENCE on humanize('QwD0  3Io8BFZQüYMÖzjMNd0G'): Python='Qwd0  3io8bfzqüymÖzjmnd0g' vs Rust='Qwd0  3io8bfzqüymözjmnd0g'
+ - DIVERGENCE on humanize('pezrHAMOqqS5AgÜ1LsD'): Python='Pezrhamoqqs5agÜ1lsd' vs Rust='Pezrhamoqqs5agü1lsd'
+ - DIVERGENCE on humanize('GgL62ZgbATd7ZYwqmRa_Jv-zAW3Ü'): Python='Ggl62zgbatd7zywqmra jv-zaw3Ü' vs Rust='Ggl62zgbatd7zywqmra jv-zaw3ü'
+ - DIVERGENCE on humanize('l95iÖM-24CeBVj'): Python='L95iÖm-24cebvj' vs Rust='L95iöm-24cebvj'
+ - DIVERGENCE on humanize('KnHrQ1er I554EkiCTeiLoÄXM4PgdQ'): Python='Knhrq1er i554ekicteiloÄxm4pgdq' vs Rust='Knhrq1er i554ekicteiloäxm4pgdq'
+ - DIVERGENCE on humanize('_q'): Python=' q' vs Rust='q'
+ - DIVERGENCE on titleize(' D6pöu_örVÖ_1'): Python=' D6Pöu Ör Vö 1' vs Rust='D6Pöu Ör Vö 1'
+ - DIVERGENCE on singularize('6lIZ6- '): Python='6lIZ6- ' vs Rust='6lIZ6-'
+ - DIVERGENCE on humanize('sRÖ1rShIdjSpjfa901clyxWrgir1'): Python='SrÖ1rshidjspjfa901clyxwrgir1' vs Rust='Srö1rshidjspjfa901clyxwrgir1'
+ - DIVERGENCE on humanize('MüÖWSOKI RdvxKEWkpybA3C'): Python='MüÖwsoki rdvxkewkpyba3c' vs Rust='Müöwsoki rdvxkewkpyba3c'
+ - DIVERGENCE on humanize('ÄI_gutmCpUt2iqiQCÄExY0tnzduoz'): Python='Äi gutmcput2iqiqcÄexy0tnzduoz' vs Rust='Äi gutmcput2iqiqcäexy0tnzduoz'
+ - DIVERGENCE on underscore(' 8lUCUXeUd'): Python=' 8l_ucu_xe_ud' vs Rust='8l_ucu_xe_ud'
+ - DIVERGENCE on humanize('wcjeÜ9lm'): Python='WcjeÜ9lm' vs Rust='Wcjeü9lm'
+ - CRASH/ERROR on humanize('-N40ÄAgo_O_Üj')
+ - DIVERGENCE on humanize('GlkJb-mHLÄ4lMm8üXü_EP'): Python='Glkjb-mhlÄ4lmm8üxü ep' vs Rust='Glkjb-mhlä4lmm8üxü ep'
+ - CRASH/ERROR on titleize('-E1CÜcvsf mÜüxlwOpNOöc')
+ - DIVERGENCE on titleize(' pkpI5täATw9'): Python=' Pkp I5Täa Tw9' vs Rust='Pkp I5Täa Tw9'
+ - DIVERGENCE on dasherize('3Ügy '): Python='3Ügy ' vs Rust='3Ügy'
+ - DIVERGENCE on humanize('JtSäLBEZYÜEPe9TR2XcitL2twk-vzd'): Python='JtsälbezyÜepe9tr2xcitl2twk-vzd' vs Rust='Jtsälbezyüepe9tr2xcitl2twk-vzd'
+ - DIVERGENCE on dasherize('bGeu2 6Qo '): Python='bGeu2 6Qo ' vs Rust='bGeu2 6Qo'
+ - CRASH/ERROR on underscore('-Ä7KÄs')
+ - DIVERGENCE on humanize('UJ4BÄdiZ0 ÄToqjhqkBRQ3z8e_'): Python='Uj4bÄdiz0 Ätoqjhqkbrq3z8e ' vs Rust='Uj4bädiz0 ätoqjhqkbrq3z8e'
+ - DIVERGENCE on humanize('m_VV_q9oXÄtb FlYÄGBB8Jiho23XO'): Python='M vv q9oxÄtb flyÄgbb8jiho23xo' vs Rust='M vv q9oxätb flyägbb8jiho23xo'
+ - DIVERGENCE on humanize('aWs7ÖVopgppscFÖüZnlVüo5ä'): Python='Aws7ÖvopgppscfÖüznlvüo5ä' vs Rust='Aws7övopgppscföüznlvüo5ä'
+ - DIVERGENCE on humanize('N5ÜÜArgZpLÖÄCÜVPoy5ÜHhEaS'): Python='N5ÜÜargzplÖÄcÜvpoy5Ühheas' vs Rust='N5üüargzplöäcüvpoy5ühheas'
+ - DIVERGENCE on titleize(' xiüöTge3yiäz9VX0FwW'): Python=' Xiüötge3Yiäz9 Vx0 Fw W' vs Rust='Xiüötge3Yiäz9 Vx0 Fw W'
+ - DIVERGENCE on humanize('YTP2H5pWrKp2jp0ZWgÖGCB39_kgWi '): Python='Ytp2h5pwrkp2jp0zwgÖgcb39 kgwi ' vs Rust='Ytp2h5pwrkp2jp0zwgögcb39 kgwi'

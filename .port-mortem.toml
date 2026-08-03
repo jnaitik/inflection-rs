@@ -1,0 +1,14 @@
+[hackathon]
+name = "Port Mortem 2026"
+track = "D" # Track D: Python -> Rust
+
+[project]
+title = "inflection-rs"
+repository = "https://github.com/jnaitik/inflection-rs"
+source_url = "https://github.com/jpvanhal/inflection"
+description = "A 1:1 behaviorally equivalent, zero-allocation Rust port of Python's inflection library."
+
+[team]
+members = [
+  "Prashant Chandra, Naitik Jain"
+]
