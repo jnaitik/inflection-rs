@@ -57,7 +57,7 @@ pub fn transliterate(string: &str) -> Cow<'_, str> {
 /// ```
 pub fn parameterize(string: &str, separator: &str) -> String {
     // Step 1: Transliterate to ASCII
-    let mut result = transliterate(string);
+    let mut result = transliterate(string).into_owned();
 
     // Step 2: Replace unwanted characters with the separator
     result = RE_PARAMETERIZE_UNWANTED
