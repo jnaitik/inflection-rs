@@ -107,7 +107,7 @@ fn main() -> Result<(), CliError> {
         Commands::Singularize { input } => inflection::singularize(&input),
         Commands::Tableize { input } => inflection::tableize(&input),
         Commands::Titleize { input } => inflection::titleize(&input),
-        Commands::Transliterate { input } => inflection::transliterate(&input),
+        Commands::Transliterate { input } => inflection::transliterate(&input).to_string(),
         Commands::Underscore { input } => inflection::underscore(&input),
     };
 
